@@ -75,12 +75,13 @@ void menuPembeli() {
     file.close();
 
     int choice = 1;
-
+    cout << "\n Nama\t\tHarga\tJumlah";
+    cout << "\n---------------------------------------";
     while (choice != count + 1) {
         for (int i = 0; i < count; ++i) {
             cout << "\n " << (i + 1) << ") " << isi[i].nama
                  << "\t" << isi[i].harga
-                 << "\t(" << isi[i].jumlah << ") tersedia";
+                 << "\t(" << isi[i].jumlah << ")";
         }
         cout << "\n " << (count + 1) << ") Batal \n\n";
         cout << "Pilih barang: ";
@@ -98,19 +99,19 @@ void menuPembeli() {
         if (choice == count + 1)
             cout << "Terima kasih telah menggunakan layanan kami";
         else if (choice <= count) {
-            float money;
+            float uang;
             cout << "Masukkan uang: ";
-            cin >> money;
+            cin >> uang;
 
             float harga = isi[choice - 1].harga;
-            if (money < harga) {
+            if (uang < harga) {
                 cout << "Uang tidak cukup.";
                 getchar();
                 getchar();
                 continue;
             }
 
-            cout << "Uang kembalian: " << (money - harga) << "\n";
+            cout << "Uang kembalian: " << "Rp. " << (uang - harga) << "\n";
             isi[choice - 1].jumlah = isi[choice - 1].jumlah - 1;
 
             cout << "Barang tersisa: " << isi[choice - 1].jumlah << "\n";
