@@ -1,6 +1,0 @@
-Pocari 8000 2
-Pucuk 2000 38
-Pecel 3000 1
-pecel 2000 2
-Fanta 7000 5
-Sprite 8000 10
